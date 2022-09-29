@@ -6,6 +6,8 @@ import Profile from "../Profile/Profile";
 function Rightside(props) {
   const [time, setTime] = useState(0);
 
+  localStorage.setItem("str", JSON.stringify(time));
+
   const breakTime = [
     {
       id: "6334f46e0d22f018736408db",

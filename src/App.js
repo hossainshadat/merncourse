@@ -10,7 +10,6 @@ function App() {
   const handleClick = (data) => {
     setCount(count + data.time);
   };
-  console.log(count);
 
   useEffect(() => {
     fetch("data.json")
