@@ -4,7 +4,7 @@ import LeftsideHeader from "../LeftsideHeader/LeftsideHeader";
 
 function Leftside(props) {
   const { data } = props;
-  console.log(data);
+  // console.log(data);
   return (
     <div className="w-full 2xl:w-9/12 p-3 sm:p-24">
       <LeftsideHeader></LeftsideHeader>
