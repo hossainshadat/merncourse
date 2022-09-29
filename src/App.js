@@ -1,5 +1,7 @@
 import "./App.css";
 import { useState, useEffect } from "react";
+import Leftside from "./components/Leftside/Leftside";
+import Rightside from "./components/Rightside/Rightside";
 
 function App() {
   const [data, setData] = useState([]);
@@ -11,13 +13,9 @@ function App() {
   }, []);
 
   return (
-    <div className="lg:flex  ">
-      <div className="bg-orange-400 lg:w-9/12 ">
-        <h1>Left Side</h1>
-      </div>
-      <div className="bg-purple-400 grow order-first lg:order-last">
-        <h1>right side</h1>
-      </div>
+    <div className="lg:flex bg-slate-200">
+      <Leftside data={data}></Leftside>
+      <Rightside></Rightside>
     </div>
   );
 }
