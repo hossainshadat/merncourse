@@ -14,7 +14,7 @@ function Excercise(props) {
       </div>
       <div className="bg-slate-200 px-3 py-3 mx-2 flex items-center text-center justify-between">
         <h2 className="text-xl font-bold">Break Time</h2>
-        <p className="text-xl text-slate-500 ">15 seconds</p>
+        <p className="text-xl text-slate-500 ">{props.time} seconds</p>
       </div>
 
       <div className="card-actions mt-12">
