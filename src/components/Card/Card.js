@@ -1,11 +1,8 @@
 import React from "react";
 
 function Card(props) {
-  const { data } = props;
-
-  const handleClick = (data) => {
-    console.log(data);
-  };
+  const { data, handleClick } = props;
+  // console.log(props);
   return (
     <div>
       <div className="card w-full bg-base-100 shadow-xl">

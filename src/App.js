@@ -6,6 +6,10 @@ import Rightside from "./components/Rightside/Rightside";
 function App() {
   const [data, setData] = useState([]);
 
+  const handleClick = (data) => {
+    console.log(data);
+  };
+
   useEffect(() => {
     fetch("data.json")
       .then((res) => res.json())
@@ -14,7 +18,7 @@ function App() {
 
   return (
     <div className="lg:flex bg-slate-200">
-      <Leftside data={data}></Leftside>
+      <Leftside handleClick={handleClick} data={data}></Leftside>
       <Rightside></Rightside>
     </div>
   );
