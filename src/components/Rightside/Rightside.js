@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Break from "../Break/Break";
 import Excercise from "../Excercise/Excercise";
 import Profile from "../Profile/Profile";
@@ -39,11 +39,19 @@ function Rightside(props) {
     const oldStorage = JSON.parse(prevStorage);
     if (oldStorage) {
       localStorage.setItem("Bookmark", JSON.stringify([second]));
-      // localStorage.setItem("Bookmark", JSON.stringify([...oldStorage,second]));
+      localStorage.setItem("Bookmark", JSON.stringify([...oldStorage, second]));
     } else {
       localStorage.setItem("Bookmark", JSON.stringify([second]));
     }
   };
+
+  useEffect(() => {
+    const items = JSON.parse(localStorage.getItem("Bookmark"));
+    if (items) {
+      // setTime(items);
+      items.map((time) => setTime(time.breakTime * 0 + time.breakTime));
+    }
+  }, [handleTime]);
 
   return (
     <div className="bg-white lg:w-3/12 px-6 py-5 sticky top-0">
