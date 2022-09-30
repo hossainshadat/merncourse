@@ -6,8 +6,6 @@ import Profile from "../Profile/Profile";
 function Rightside(props) {
   const [time, setTime] = useState(0);
 
-  localStorage.setItem("str", JSON.stringify(time));
-
   const breakTime = [
     {
       id: "6334f46e0d22f018736408db",
@@ -32,7 +30,21 @@ function Rightside(props) {
   ];
 
   const handleTime = (breakTime) => {
+    const second = {
+      breakTime,
+    };
     setTime(time * 0 + breakTime);
+
+    console.log(time);
+
+    const prevStorage = localStorage.getItem("Bookmark");
+    const oldStorage = JSON.parse(prevStorage);
+    if (oldStorage) {
+      localStorage.setItem("Bookmark", JSON.stringify([second]));
+      // localStorage.setItem("Bookmark", JSON.stringify([...oldStorage,second]));
+    } else {
+      localStorage.setItem("Bookmark", JSON.stringify([second]));
+    }
   };
 
   return (

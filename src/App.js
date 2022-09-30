@@ -2,6 +2,8 @@ import "./App.css";
 import { useState, useEffect } from "react";
 import Leftside from "./components/Leftside/Leftside";
 import Rightside from "./components/Rightside/Rightside";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function App() {
   const [data, setData] = useState([]);
@@ -15,6 +17,11 @@ function App() {
     fetch("data.json")
       .then((res) => res.json())
       .then((data) => setData(data));
+  }, []);
+
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
   }, []);
 
   return (

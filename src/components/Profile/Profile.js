@@ -15,14 +15,14 @@ function Profile() {
         </div>
       </div>
       <div>
-        <div className="bg-slate-200 mx-3 my-10 px-7 py-4 flex justify-between">
+        <div className="bg-violet-400 mx-3 my-10 px-2 py-4 flex flex-wrap">
           <div className="bg-white px-3 py-3 rounded">
             <h2 className="text-3xl font-bold">
               55 <small className="text-xs text-slate-300 ml-[-7px]">kg</small>
             </h2>
             <p className="text-sm">Weight</p>
           </div>
-          <div className="bg-white px-3 py-3 rounded">
+          <div className="bg-white px-3 mx-3 py-3 rounded">
             <h2 className="text-3xl font-bold">5.5</h2>
             <p className="text-sm">Height</p>
           </div>

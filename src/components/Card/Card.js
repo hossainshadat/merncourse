@@ -4,7 +4,7 @@ function Card(props) {
   const { data, handleClick } = props;
   // console.log(props);
   return (
-    <div>
+    <div data-aos="zoom-in">
       <div className="card w-full bg-base-100 shadow-xl">
         <figure className="px-3 pt-3">
           <img src={data.picture} alt="Shoes" className="rounded-xl" />

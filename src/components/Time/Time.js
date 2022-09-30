@@ -4,7 +4,10 @@ function Time(props) {
   // console.log(props);
   return (
     <div>
-      <div className="bg-white px-3 py-3 mx-2 rounded-full">
+      <div
+        style={{ backgroundColor: "gray" }}
+        className="bg-white px-3 py-3 mx-2 rounded-full"
+      >
         <button
           onClick={() => props.handleTime(props.time.count)}
           className="text-xl font-bold"
