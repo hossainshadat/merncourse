@@ -35,8 +35,6 @@ function Rightside(props) {
     };
     setTime(time * 0 + breakTime);
 
-    console.log(time);
-
     const prevStorage = localStorage.getItem("Bookmark");
     const oldStorage = JSON.parse(prevStorage);
     if (oldStorage) {
